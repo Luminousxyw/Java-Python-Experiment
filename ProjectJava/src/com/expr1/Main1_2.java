@@ -12,5 +12,6 @@ public class Main1_2 {
         else{
             System.out.println(b<c?b:c);
         }
+        scanner.close();
     }
 }

@@ -17,5 +17,6 @@ public class Main5_1 {
         int n=sc.nextInt();
         long num=fibonacci(n);
         System.out.println(num);
+        sc.close();
     }
 }

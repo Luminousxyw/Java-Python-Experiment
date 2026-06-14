@@ -19,5 +19,6 @@ public class Main2_1 {
             case 11:System.out.println("秋季");break;
             default:break;
         }
+        scanner.close();
     }
 }

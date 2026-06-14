@@ -13,5 +13,6 @@ public class Main2_2 {
                 break;
             }
         }
+        scanner.close();
     }
 }

@@ -6,5 +6,6 @@ public class Main1_1 {
         int a=scanner.nextInt();
         int b=scanner.nextInt();
         System.out.println(a<b?a:b);
+        scanner.close();
     }
 }

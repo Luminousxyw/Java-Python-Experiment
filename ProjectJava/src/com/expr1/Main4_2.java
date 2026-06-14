@@ -13,5 +13,6 @@ public class Main4_2 {
             sum+=i;
         }
         System.out.println(sum);
+        scanner.close();
     }
 }
