@@ -1,3 +1,4 @@
+package com.expr1;
 public class Main3_1 {
     public static void main(String[] args) {
         int sum=0;

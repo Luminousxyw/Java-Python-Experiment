@@ -1,3 +1,4 @@
+package com.expr1;
 import java.util.Scanner;
 public class Main5_1 {
     public static long fibonacci(int n){

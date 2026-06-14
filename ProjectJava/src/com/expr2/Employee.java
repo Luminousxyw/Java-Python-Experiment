@@ -1,3 +1,4 @@
+package com.expr2;
 public class Employee {
 	private String id,name,dept;
 	private double salary;

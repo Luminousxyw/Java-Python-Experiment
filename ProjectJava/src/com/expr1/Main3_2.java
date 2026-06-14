@@ -1,3 +1,4 @@
+package com.expr1;
 public class Main3_2 {
     public static void main(String[] args){
         int[] nums=new int[999];

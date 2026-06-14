@@ -1,3 +1,4 @@
+package com.expr2;
 public class TestEmployee {
 	public static void main(String[] args) {
 		//无参数构造
