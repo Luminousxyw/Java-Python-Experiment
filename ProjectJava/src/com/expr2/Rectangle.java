@@ -25,6 +25,7 @@ public class Rectangle {
     }
     public void setSize(double len) {
         if (len < 0) {
+            System.out.println("边长不能为负数");
         } else {
             this.length = len;
             this.width = len;
@@ -32,10 +33,12 @@ public class Rectangle {
     }
     public void setSize(double len, double wid) {
         if (len < 0) {
+            System.out.println("长不能为负数");
         } else {
             this.length = len;
         }
         if (wid < 0) {
+            System.out.println("宽不能为负数");
         } else {
             this.width = wid;
         }
@@ -45,6 +48,7 @@ public class Rectangle {
     }
     public void setLength(double length) {
         if (length < 0) {
+            System.out.println("边长不能为负数");
         } else {
             this.length = length;
         }
@@ -54,6 +58,7 @@ public class Rectangle {
     }
     public void setWidth(double width) {
         if (width < 0) {
+            System.out.println("边长不能为负数");
         } else {
             this.width = width;
         }

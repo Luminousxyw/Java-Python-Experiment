@@ -17,28 +17,28 @@ public class Employee {
 	public void raiseSalary(double add) {
 		this.salary+=add;
 	}
-	public void setID(String id) {
+	public void setId(String id) {
 		this.id=id;
 	}
-	public void setNAME(String name) {
+	public void setName(String name) {
 		this.name=name;
 	}
-	public void setDEPT(String dept) {
+	public void setDept(String dept) {
 		this.dept=dept;
 	}
-	public void setSALARY(double salary) {
+	public void setSalary(double salary) {
 		this.salary=salary;
 	}
-	public String getID() {
+	public String getId() {
 		return this.id;
 	}
-	public String getNAME() {
+	public String getName() {
 		return this.name;
 	}
-	public String getDEPT() {
+	public String getDept() {
 		return this.dept;
 	}
-	public double getSALARY() {
+	public double getSalary() {
 		return this.salary;
 	}
 	

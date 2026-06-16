@@ -17,7 +17,7 @@ public class Main2_1 {
             case 9:System.out.println("秋季");break;
             case 10:System.out.println("秋季");break;
             case 11:System.out.println("秋季");break;
-            default:break;
+            default:System.out.println("输入错误，请输入1-12之间的整数");break;
         }
         scanner.close();
     }

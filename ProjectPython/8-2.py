@@ -1,8 +1,7 @@
 import os
 import threading
 import time
-import urllib.request
-import urllib.error
+import requests
 
 
 class Downloader:
@@ -26,12 +25,13 @@ class Downloader:
             if existing_size > 0:
                 print("断点续传: {} 已有{}字节".format(filename, existing_size))
 
-        req = urllib.request.Request(url)
+        headers = {}
         if existing_size > 0:
-            req.add_header("Range", "bytes={}-".format(existing_size))
+            headers["Range"] = "bytes={}-".format(existing_size)
 
         try:
-            response = urllib.request.urlopen(req, timeout=30)
+            response = requests.get(url, headers=headers, stream=True, timeout=30)
+            response.raise_for_status()
             content_length = response.headers.get("Content-Length")
             total_size = None
             if content_length:
@@ -45,7 +45,7 @@ class Downloader:
 
             with open(filepath, mode) as f:
                 while True:
-                    chunk = response.read(8192)
+                    chunk = response.iter_content(8192)
                     if not chunk:
                         break
                     f.write(chunk)
@@ -72,7 +72,7 @@ class Downloader:
                 filename, filepath, avg_speed))
             return True
 
-        except urllib.error.URLError as e:
+        except requests.exceptions.RequestException as e:
             print("下载失败：{} 网络异常 {}".format(filename, e))
             return False
         except Exception as e:
