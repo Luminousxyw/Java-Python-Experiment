@@ -44,10 +44,7 @@ class Downloader:
             last_bytes = downloaded
 
             with open(filepath, mode) as f:
-                while True:
-                    chunk = response.iter_content(8192)
-                    if not chunk:
-                        break
+                for chunk in response.iter_content(8192):
                     f.write(chunk)
                     downloaded += len(chunk)
 
