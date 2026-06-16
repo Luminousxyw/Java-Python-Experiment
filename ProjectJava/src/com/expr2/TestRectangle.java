@@ -1,7 +1,7 @@
 package com.expr2;
 
 public class TestRectangle {
-    public static void main(){
+    public static void main(String[] args){
         Rectangle rect1=new Rectangle();
         System.out.println("rect1的面积和周长为："+rect1.getArea()+" and "+rect1.getPerimeter());
         Rectangle rect2=new Rectangle(5.0,-3.0);
