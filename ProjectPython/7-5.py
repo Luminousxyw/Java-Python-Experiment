@@ -175,7 +175,10 @@ def test():
     admin.manage_books()
     lib.borrow(admin, "ISBN001")
     lib.borrow(admin, "ISBN001")
-    lib.borrow(admin, "ISBN001")
+    try:
+        lib.borrow(admin, "ISBN001")
+    except Exception as e:
+        print(f"借阅异常: {e}")
 
     lib.show_status()
     lib.save_data()
